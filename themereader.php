@@ -1,4 +1,0 @@
-<?php
-$theme = '';
-
-global $theme;

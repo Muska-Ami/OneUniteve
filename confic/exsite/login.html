@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+        <title>登录 - XM's Network</title>
+        <link rel="stylesheet" href="?reader=resource&path=css/login.css&type=css" type="text/css" />
+        <script src="?reader=resource&path=js/md5.min.js&type=js"></script>
+        <script src="?reader=resource&path=js/sha256.min.js&type=js"></script>
+        <script src="https://www.recaptcha.net/recaptcha/api.js" async defer></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="tit">登录</div>
+            <div class="tip-container"></div>
+            <label>
+                <input class="username" type="text" placeholder="账号" />
+            </label>
+            <label>
+                <input class="password" type="password" placeholder="密码" />
+            </label>
+            <button id="login" onclick="login()">登录</button>
+            <span>没有账号？<a href="../register/">去注册</a></span>
+        </div>
+    </body>
+
+    <script src="?reader=resource&path=js/login.js&type=js"></script>
+
+</html>

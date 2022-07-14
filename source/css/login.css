@@ -1,0 +1,77 @@
+* {
+    /* 初始化 */
+    margin: 0;
+    padding: 0;
+}
+body {
+    /* 100%窗口高度 */
+    height: 100vh;
+    /* 弹性布局 居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 渐变背景 */
+    background: linear-gradient(200deg, #66ccff, #0066ff);
+    /* 溢出隐藏 */
+    overflow-bottom: hidden;
+}
+.container {
+    /* 相对定位 */
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+    border-radius: 5px;
+    /* 弹性布局 垂直排列 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    height: 500px;
+    /* 阴影 */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    margin-top: 80px;
+    margin-bottom: 80px;
+    padding-bottom: 20px;
+}
+.container .tit {
+    font-size: 26px;
+    margin: 65px auto 70px auto;
+}
+.container input {
+    width: 280px;
+    height: 30px;
+    text-indent: 8px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    outline: none;
+    margin: 12px auto;
+    transition: 0.75s;
+}
+.container input:hover {
+    border-bottom: 1px solid blue;
+    text-indent: 10px;
+}
+.container button {
+    width: 280px;
+    height: 40px;
+    margin: 35px auto 40px auto;
+    border: none;
+    background: skyblue;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    /* 动画过渡 */
+    transition: 0.5s;
+}
+.container button:hover {
+    background: #3399ff;
+}
+.container span {
+    font-size: 14px;
+}
+.container a {
+    color: plum;
+    text-decoration: none;
+}
