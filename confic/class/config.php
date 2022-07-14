@@ -17,4 +17,14 @@ class Config
     {
         return $this->getConfig()->sitename;
     }
+
+    public function getLanguage()
+    {
+        return $this->getConfig()->language;
+    }
+
+    public function getIconUrl()
+    {
+        return $this->getConfig()->icon_url;
+    }
 }

@@ -32,12 +32,19 @@ if(isset($_GET['reader'])) {
             break;
     }
 } else if (isset($_GET['login'])) {
-    include 'confic/login.php';
-    $html = (new Login)->getLoginSite();
+    include 'confic/class/login.php';
+    include 'confic/class/config.php';
+    include 'confic/class/render.php';
+    $html = (new Render)->renderFileVariables(
+        (new Login)->getLoginSite()
+    );
     echo $html;
 } else {
-    include 'confic/config.php';
+    include 'confic/class/config.php';
+    include 'confic/class/render.php';
     $theme = (new Config)->getTheme();
-    $html = file_get_contents("theme/" . $theme . "/main.html");
+    $html = (new Render)->renderFileVariables(
+        file_get_contents("theme/" . $theme . "/main.html")
+    );
     echo $html;
 }
