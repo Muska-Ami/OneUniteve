@@ -1,0 +1,12 @@
+.cpc {
+    color: rgb(105, 105, 105);
+    border: 1px solid gray;
+    padding: 5px 10px;
+    border-radius: 50px;
+}
+.cpc span {
+    font-size: 14px;
+}
+.cpc a {
+    color: #66ccff;
+}

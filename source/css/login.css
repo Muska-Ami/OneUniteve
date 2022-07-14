@@ -71,7 +71,14 @@ body {
 .container span {
     font-size: 14px;
 }
-.container a {
-    color: plum;
-    text-decoration: none;
+
+.cpc {
+    color: rgb(105, 105, 105);
+    border: 1px solid gray;
+    padding: 5px 10px;
+    border-radius: 50px;
+    margin-top: 50px;
+}
+.cpc a {
+    color: #66ccff;
 }
