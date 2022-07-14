@@ -43,7 +43,7 @@ function extracted(string $pathd): void
     if (!file_exists($pathd)) {
         http_response_code(404);
     } else {
-        switch (pathinfo($pathd)['extension']) {
+        switch (pathinfo(basename($pathd))['extension']) {
             case 'css':
                 header("Content-Type: text/css");
                 $data = file_get_contents($pathd);
