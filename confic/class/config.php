@@ -57,25 +57,15 @@ class Config
         return $data;
     }
 
-    public function resx(): void
+
+    function getresxUserName()
     {
-        function getUserName()
-        {
-            $conf = getConfig();
-            return $conf->resx->username;
-        }
-
-        function getPassword()
-        {
-            $conf = getConfig();
-            return $conf->resx->password;
-        }
-
-        function getConfig()
-        {
-            return json_decode(
-                file_get_contents("confic/config.json")
-            );
-        }
+        $conf = $this->getConfig();
+        return $conf->resx->username;
+    }
+    function getresxPassword()
+    {
+        $conf = $this->getConfig();
+        return $conf->resx->password;
     }
 }

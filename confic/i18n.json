@@ -5,15 +5,19 @@
     "en": "English"
   },
   "i18n": {
-    "zh-cn": {
-      "0": ["Login", "登录"],
-      "1": ["Account", "账户"],
-      "2": ["Password", "密码"]
-    },
-    "en": {
-      "0": ["Login", "Login"],
-      "1": ["Account", "Account"],
-      "2": ["Password", "Password"]
-    }
+    "zh-cn": [
+      ["Login", "登录"],
+      ["Account", "账户"],
+      ["Password", "密码"],
+      ["LoginSuccess", "登录成功"],
+      ["LoginRedirect", "正在重定向..."]
+    ],
+    "en": [
+      ["Login", "Login"],
+      ["Account", "Account"],
+      ["Password", "Password"],
+      ["LoginSuccess", "Login Success"],
+      ["LoginRedirect", "Redirecting..."]
+    ]
   }
 }

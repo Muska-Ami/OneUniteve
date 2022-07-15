@@ -26,11 +26,15 @@ if(isset($_GET['reader'])) {
     if (isset($_GET['resx'])) {
         include 'confic/class/config.php';
         include 'confic/class/login.php';
+        include 'confic/class/render.php';
         $username = $_GET['username'];
         $password = $_GET['password'];
         if (Login::resxUP($username, $password)) {
             setcookie("REF_TOKEN", hash("haval192,5", $password), time()+3600);
-            echo print_r($_COOKIE);
+            $html = (new Render)->renderFileVariables(
+                (new Login)->getLoginedSite()
+            );
+            echo $html;
         } else {
             header("Content-Type: application/json");
             echo json_encode(array(
