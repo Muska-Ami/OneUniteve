@@ -23,8 +23,8 @@ if(isset($_GET['reader'])) {
             break;
     }
 } else if (isset($_GET['login'])) {
+    include 'confic/class/config.php';
     if (isset($_GET['resx'])) {
-        include 'confic/class/config.php';
         include 'confic/class/login.php';
         include 'confic/class/render.php';
         $username = $_GET['username'];
@@ -43,14 +43,19 @@ if(isset($_GET['reader'])) {
             ));
         }
     } else {
-        include 'confic/class/login.php';
-        include 'confic/class/config.php';
-        include 'confic/class/render.php';
-        $html = (new Render)->renderFileVariables(
-            (new Login)->getLoginSite()
-        );
-        echo $html;
+        if (isset($_COOKIE['REF_TOKEN']) && $_COOKIE['REF_TOKEN'] == hash("haval192,5", hash("sha224", hash("sha256", md5((new Config)->getresxPassword()))))) {
+            header("Location: ?manager");
+        } else {
+            include 'confic/class/login.php';
+            include 'confic/class/render.php';
+            $html = (new Render)->renderFileVariables(
+                (new Login)->getLoginSite()
+            );
+            echo $html;
+        }
     }
+} else if (isset($_GET['manager'])) {
+    echo 'Manager:Making';
 } else {
     include 'confic/class/config.php';
     include 'confic/class/render.php';
