@@ -24,8 +24,14 @@ class Render
     {
         $i18ndata = (new Config)->getI18n();
         $lang = (new Config)->getLanguage();
-        foreach ($i18ndata->i18n->$lang as $item) {
-            while (strpos($f, "{#-$item[0]-#}")) $f = str_replace("{#-$item[0]-#}", $item[1], $f);
+        if ($i18ndata->i18n->$lang != null) {
+            foreach ($i18ndata->i18n->$lang as $item) {
+                while (strpos($f, "{#-$item[0]-#}")) $f = str_replace("{#-$item[0]-#}", $item[1], $f);
+            }
+        } else {
+            foreach ($i18ndata->i18n->en as $item) {
+                while (strpos($f, "{#-$item[0]-#}")) $f = str_replace("{#-$item[0]-#}", $item[1], $f);
+            }
         }
         return $f;
     }

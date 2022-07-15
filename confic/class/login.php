@@ -4,7 +4,7 @@ class Login
 
     public static function resxUP($username, $password): bool
     {
-        if (md5((new Config)->getresxUserName()) == $username && hash("sha224", hash("sha256", md5((new Config)->getresxPassword()))) == $password) {
+        if (md5((new Config)->getresxUserName()) === $username && hash("sha224", hash("sha256", md5((new Config)->getresxPassword()))) === $password) {
             return true;
         }
         return false;

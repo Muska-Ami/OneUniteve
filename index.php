@@ -43,7 +43,7 @@ if(isset($_GET['reader'])) {
             ));
         }
     } else {
-        if (isset($_COOKIE['REF_TOKEN']) && $_COOKIE['REF_TOKEN'] == hash("haval192,5", hash("sha224", hash("sha256", md5((new Config)->getresxPassword()))))) {
+        if (isset($_COOKIE['REF_TOKEN']) && $_COOKIE['REF_TOKEN'] === hash("haval192,5", hash("sha224", hash("sha256", md5((new Config)->getresxPassword()))))) {
             header("Location: ?manager");
         } else {
             include 'confic/class/login.php';
