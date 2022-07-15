@@ -3,19 +3,21 @@
 if(isset($_GET['reader'])) {
     switch ($_GET['reader']) {
         case 'api':
-            include 'api/autoload.php';
+            include 'api/load.php';
             break;
         case 'resource':
             $path = $_GET['path'];
             if (isset($path)) {
-                $pathd = "source/" . $path;
+                $pathd = "source/$path";
                 extracted($pathd);
             }
             break;
         case 'theme-resource':
+            include 'confic/class/config.php';
             $path = $_GET['path'];
             if (isset($path)) {
-                $pathd = "theme/" . $path;
+                $theme = (new Config)->getTheme();
+                $pathd = "theme/$theme/$path";
                 extracted($pathd);
             }
             break;
@@ -51,6 +53,26 @@ function extracted(string $pathd): void
                 break;
             case 'js':
                 header("Content-Type: text/javascript");
+                $data = file_get_contents($pathd);
+                echo $data;
+                break;
+            case 'jpg' || 'jpeg':
+                header("Content-Type: image/jpeg");
+                $data = file_get_contents($pathd);
+                echo $data;
+                break;
+            case 'png':
+                header("Content-Type: image/png");
+                $data = file_get_contents($pathd);
+                echo $data;
+                break;
+            case 'svg':
+                header("Content-Type: image/svg+xml");
+                $data = file_get_contents($pathd);
+                echo $data;
+                break;
+            case 'webp':
+                header("Content-Type: image/webp");
                 $data = file_get_contents($pathd);
                 echo $data;
                 break;

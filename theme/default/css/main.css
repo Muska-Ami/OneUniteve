@@ -1,4 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main .left {
+    border-right: 1px solid gray;
+    width: 250px;
+    height: 100vh;
+}
+
+header {
+    width: 100vw;
+    height: 60px;
+    color: white;
+    background-color: rgb(2, 119, 211);
+    border-bottom: 1px solid gray;
+}
+header .fullblock {
+    padding: 8px;
+}
+header .wstitle {
+    font-weight: 400;
+    margin-left: 5px;
+}
+
+footer {
+    border-top: 1px solid gray;
+    background-color: rgb(196, 234, 255);
+    width: 100vw;
+}
+footer .fullblock {
+    padding: 30px;
+}
+
 .cpc {
+    background-color: white;
     color: rgb(105, 105, 105);
     border: 1px solid gray;
     padding: 5px 10px;
@@ -9,4 +45,20 @@
 }
 .cpc a {
     color: #66ccff;
+}
+
+.langselect {
+    transform: translate(0, -35px);
+    float: right;
+}
+.langselect select {
+    padding: 8px;
+    outline: none;
+    border: none;
+}
+
+@media screen and (max-width: 800px) {
+    main .left {
+        display: none;
+    }
 }

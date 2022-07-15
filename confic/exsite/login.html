@@ -6,13 +6,19 @@
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
         <title>登录 - {#[Title]#}</title>
         <link rel="icon" href="{#[IconUrl]#}" />
-        <link rel="stylesheet" href="?reader=resource&path=css/login.css&type=css" type="text/css" />
-        <script src="?reader=resource&path=js/md5.min.js&type=js"></script>
-        <script src="?reader=resource&path=js/sha256.min.js&type=js"></script>
+        <link rel="stylesheet" href="?reader=resource&path=css/login.css" type="text/css" />
+        <script src="?reader=resource&path=js/md5.min.js"></script>
+        <script src="?reader=resource&path=js/sha256.min.js"></script>
     </head>
 
     <body>
         <div class="container">
+            <label class="langselect">
+                <select>
+                    <option>自动(Auto) - {#[NowLanguage]#}</option>
+                    {#[LanguageList]#}
+                </select>
+            </label>
             <div class="tit">登录</div>
             <div class="tip-container"></div>
             <label>
@@ -22,10 +28,10 @@
                 <input class="password" type="password" placeholder="密码" />
             </label>
             <button id="login" onclick="login()">登录</button>
-            <span class="cpc">Powered by <a href="https://github.com/XiaMoHuaHuo-CN/OneUniteve">OneUniteve</a></span>
+            <span class="cpc">Powered by <a href="https://github.com/XiaMoHuaHuo-CN/OneUniteve" target="_blank">OneUniteve</a></span>
         </div>
     </body>
 
-    <script src="?reader=resource&path=js/login.js&type=js"></script>
+    <script src="?reader=resource&path=js/login.js"></script>
 
 </html>

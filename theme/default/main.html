@@ -6,18 +6,29 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
     <title>{#[Title]#}</title>
     <link rel="icon" href="{#[IconUrl]#}" />
-    <link rel="stylesheet" href="?reader=theme-resource&path=">
+    <link rel="stylesheet" href="?reader=theme-resource&path=css/main.css" />
 </head>
 <body>
     <header>
-
+        <div class="fullblock">
+            <h1 class="wstitle">{#[WSTitle]#}</h1>
+            <label class="langselect">
+                <select>
+                    <option>自动(Auto) - {#[NowLanguage]#}</option>
+                    {#[LanguageList]#}
+                </select>
+            </label>
+        </div>
     </header>
     <main>
-        <div class="left"></div>
+        <div class="left">
+        </div>
         <div class="fdata">{#[FData]#}</div>
     </main>
     <footer>
-        <span class="cpc">Powered by <a href="https://github.com/XiaMoHuaHuo-CN/OneUniteve">OneUniteve</a></span>
+        <div class="fullblock">
+            <span class="cpc">Powered by <a href="https://github.com/XiaMoHuaHuo-CN/OneUniteve" target="_blank">OneUniteve</a></span>
+        </div>
     </footer>
 </body>
 </html>
