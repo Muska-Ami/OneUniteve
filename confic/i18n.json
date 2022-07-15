@@ -6,14 +6,14 @@
   },
   "i18n": {
     "zh-cn": {
-      "Login": "登录",
-      "Account": "账户",
-      "Password": "密码"
+      "0": ["Login", "登录"],
+      "1": ["Account", "账户"],
+      "2": ["Password", "密码"]
     },
     "en": {
-      "Login": "Login",
-      "Account": "Account",
-      "Password": "Password"
+      "0": ["Login", "Login"],
+      "1": ["Account", "Account"],
+      "2": ["Password", "Password"]
     }
   }
 }

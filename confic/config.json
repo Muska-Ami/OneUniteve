@@ -3,5 +3,9 @@
   "sitename": "OneUniteve",
   "language": "zh-cn",
   "icon_url": "https://console.cloud.tencent.com/favicon.ico",
-  "theme": "default"
+  "theme": "default",
+  "resx": {
+    "username": "demo",
+    "password": "123456"
+  }
 }

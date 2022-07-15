@@ -15,6 +15,6 @@ function login() {
     } else {
         tipcontainer.style.color = '';
         tipcontainer.innerHTML = '';
-        window.location = '../../api/auth/session/login?username=' + username + '&password=' + password;
+        window.location = '?login&resx&username=' + username + '&password=' + password;
     }
 }

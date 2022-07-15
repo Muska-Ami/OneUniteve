@@ -9,6 +9,7 @@ class Render
         $data = $this->replace("WSTitle", (new Config)->getSiteName(), $data);
         $data = $this->replace("NowLanguage", (new Config)->getNowLanguage(), $data);
         $data = $this->replace("LanguageList", (new Config)->getLanguageList(), $data);
+        $data = $this->replace_i18n($data);
         $data = $this->replace("FData", '', $data);
         return $data;
     }
@@ -16,6 +17,16 @@ class Render
     private function replace($s, $t, $f): array|string
     {
         while (strpos($f, "{#[$s]#}")) $f = str_replace("{#[$s]#}", $t, $f);
+        return $f;
+    }
+
+    private function replace_i18n($f)
+    {
+        $i18ndata = (new Config)->getI18n();
+        $lang = (new Config)->getLanguage();
+        foreach ($i18ndata->i18n->$lang as $item) {
+            while (strpos($f, "{#-$item[0]-#}")) $f = str_replace("{#-$item[0]-#}", $item[1], $f);
+        }
         return $f;
     }
 }

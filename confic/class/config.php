@@ -8,7 +8,7 @@ class Config
         );
     }
 
-    private function getI18n()
+    public function getI18n()
     {
         return json_decode(
             file_get_contents("confic/i18n.json")
@@ -55,5 +55,27 @@ class Config
             $data .= "<option>$str</option>";
         }
         return $data;
+    }
+
+    public function resx(): void
+    {
+        function getUserName()
+        {
+            $conf = getConfig();
+            return $conf->resx->username;
+        }
+
+        function getPassword()
+        {
+            $conf = getConfig();
+            return $conf->resx->password;
+        }
+
+        function getConfig()
+        {
+            return json_decode(
+                file_get_contents("confic/config.json")
+            );
+        }
     }
 }
