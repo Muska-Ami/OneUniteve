@@ -12,7 +12,9 @@
     <body>
         <header>
             <div class="fullblock">
-                <h1 class="wstitle">{#[WSTitle]#}</h1>
+                <a href="./">
+                    <h1 class="wstitle">{#[WSTitle]#}</h1>
+                </a>
                 <label class="langselect">
                     <select>
                         <option value="auto">自动(Auto) - {#[NowLanguage]#}</option>
@@ -23,8 +25,14 @@
         </header>
         <main>
             <div class="left">
+                <button onclick="window.location='?login'">登录</button>
+                <button onclick="window.location='?manager'">管理面板</button>
             </div>
-            <div class="fdata">{#[FData]#}</div>
+            <div class="mpl">
+                <button onclick="window.location='?login'">登录</button>
+                <button onclick="window.location='?manager'">管理面板</button>
+                <div class="fdata">{#[FData]#}</div>
+            </div>
         </main>
         <footer>
             <div class="fullblock">

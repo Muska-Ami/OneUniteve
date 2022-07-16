@@ -56,8 +56,8 @@ if(isset($_GET['reader'])) {
         }
     }
 } else if (isset($_GET['manager'])) {
+    include 'confic/class/config.php';
     if (isset($_COOKIE['REF_TOKEN']) && $_COOKIE['REF_TOKEN'] === hash("haval192,5", hash("sha224", hash("sha256", md5((new Config)->getresxPassword()))))) {
-        include 'confic/class/config.php';
         include 'confic/class/manager.php';
         include 'confic/class/render.php';
         echo (new Manager)->getManagerSite();

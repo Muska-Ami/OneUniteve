@@ -10,7 +10,9 @@
     <body>
         <header>
             <div class="fullblock">
-                <h1 class="wstitle">{#[WSTitle]#}</h1>
+                <a href="./">
+                    <h1 class="wstitle">{#[WSTitle]#}</h1>
+                </a>
                 <label class="langselect">
                     <select>
                         <option value="auto">自动(Auto) - {#[NowLanguage]#}</option>
@@ -21,7 +23,9 @@
         </header>
 
         <main>
-            
+            <button onclick="document.cookie = 'REF_TOKEN=empty; expires=Thu, 01 Jan 0000 00:00:00 UTC;';window.location='./'">退出登录</button>
+            <h1>好你进了管理界面，但是什么都没有（</h1>
+            <h2>闲着也是闲着，不如给个Star？<a href="https://github.com/XiaMoHuaHuo-CN/OneUniteve" target="_blank">https://github.com/XiaMoHuaHuo-CN/OneUniteve</a></h2>
         </main>
 
         <footer>

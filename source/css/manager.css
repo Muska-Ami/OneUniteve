@@ -13,9 +13,13 @@ header {
 header .fullblock {
     padding: 8px;
 }
-header .wstitle {
+header .fullblock a .wstitle {
     font-weight: 400;
+    color: white;
     margin-left: 5px;
+}
+a {
+    text-decoration: none;
 }
 
 footer {
