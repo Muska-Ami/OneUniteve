@@ -55,7 +55,10 @@ if(isset($_GET['reader'])) {
         }
     }
 } else if (isset($_GET['manager'])) {
-    echo 'Manager:Making';
+    include 'confic/class/config.php';
+    include 'confic/class/manager.php';
+    include 'confic/class/render.php';
+    echo (new Manager)->getManagerSite();
 } else {
     include 'confic/class/config.php';
     include 'confic/class/render.php';

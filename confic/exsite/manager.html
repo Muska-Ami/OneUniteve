@@ -5,8 +5,29 @@
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
         <title>管理 - {#[Title]#}</title>
         <link rel="icon" href="{#[IconUrl]#}" />
+        <link rel="stylesheet" href="?reader=resource&path=css/manager.css" type="text/css" />
     </head>
     <body>
-        <a href="javascript:">测试</a>
+        <header>
+            <div class="fullblock">
+                <h1 class="wstitle">{#[WSTitle]#}</h1>
+                <label class="langselect">
+                    <select>
+                        <option>自动(Auto) - {#[NowLanguage]#}</option>
+                        {#[LanguageList]#}
+                    </select>
+                </label>
+            </div>
+        </header>
+
+        <main>
+            
+        </main>
+
+        <footer>
+            <div class="fullblock">
+                <span class="cpc">Powered by <a href="https://github.com/XiaMoHuaHuo-CN/OneUniteve" target="_blank">OneUniteve</a></span>
+            </div>
+        </footer>
     </body>
 </html>
