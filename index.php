@@ -1,4 +1,5 @@
 <?php
+include 'confic/class/lang.php';
 
 if(isset($_GET['reader'])) {
     switch ($_GET['reader']) {

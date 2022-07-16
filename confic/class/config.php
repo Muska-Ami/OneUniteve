@@ -25,11 +25,6 @@ class Config
         return $this->getConfig()->sitename;
     }
 
-    public function getLanguage()
-    {
-        return $this->getConfig()->language;
-    }
-
     public function getIconUrl()
     {
         return $this->getConfig()->icon_url;
@@ -43,8 +38,8 @@ class Config
     public function getNowLanguage(): string
     {
         $langlist = $this->getI18n()->langlist;
-        $lang = $this->getLanguage();
-        return $langlist->$lang;
+        $lang = getLang();
+        return $langlist->$lang[1];
     }
 
     public function getLanguageList(): string
@@ -52,7 +47,7 @@ class Config
         $langlist = $this->getI18n()->langlist;
         $data = '';
         foreach ($langlist as $str) {
-            $data .= "<option>$str</option>";
+            $data .= "<option value=\"$str[0]\">$str[1]</option>";
         }
         return $data;
     }
