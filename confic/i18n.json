@@ -12,6 +12,13 @@
       ["LoginSuccess", "登录成功"],
       ["LoginRedirect", "正在重定向..."]
     ],
+    "zh": [
+      ["Login", "登錄"],
+      ["Account", "賬戶"],
+      ["Password", "密碼"],
+      ["LoginSuccess", "登錄成功"],
+      ["LoginRedirect", "正在重定向..."]
+    ],
     "en": [
       ["Login", "Login"],
       ["Account", "Account"],
