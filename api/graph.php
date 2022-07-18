@@ -13,7 +13,7 @@ class Graph
 
     private function getsocpe(): string
     {
-        return urlencode('Files.ReadWrite.All Sites.ReadWrite.All');
+        return urlencode('Files.ReadWrite.All Sites.ReadWrite.All offline_access');
     }
 
     private function getredirecturi(): string
