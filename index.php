@@ -37,11 +37,10 @@ if(isset($_GET['reader'])) {
             );
             echo $html;
         } else {
-            header("Content-Type: application/json");
-            echo json_encode(array(
-                "status" => 0,
-                "message" => "Authorization failed"
-            ));
+            $html = (new Render)->renderFileVariables(
+                (new Login)->getLoginFailedSite()
+            );
+            echo $html;
         }
     } else {
         if (isset($_COOKIE['REF_TOKEN']) && $_COOKIE['REF_TOKEN'] === hash("haval192,5", hash("sha224", hash("sha256", md5((new Config)->getresxPassword()))))) {

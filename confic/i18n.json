@@ -10,7 +10,8 @@
       ["Account", "账户"],
       ["Password", "密码"],
       ["LoginSuccess", "登录成功"],
-      ["LoginRedirect", "正在重定向..."]
+      ["LoginRedirect", "正在重定向..."],
+      ["LoginFailed", "登录失败"]
     ],
     "zh": [
       ["Login", "登錄"],

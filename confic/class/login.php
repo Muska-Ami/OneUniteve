@@ -18,4 +18,9 @@ class Login
     {
         return file_get_contents("confic/exsite/logined.html");
     }
+
+    public function getLoginFailedSite()
+    {
+        return file_get_contents("confic/exsite/loginfailed.html");
+    }
 }
