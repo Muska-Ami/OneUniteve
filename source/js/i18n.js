@@ -7,7 +7,7 @@ langcontainer.onchange = function (e) {
     } else {
         setCookie("OU_LANG", lang);
     }
-    console.log(lang);
+    location.reload();
 }
 
 function setCookie(name, value, daysToLive) {

@@ -19,7 +19,7 @@ class Login
         return file_get_contents("confic/exsite/logined.html");
     }
 
-    public function getLoginFailedSite()
+    public function getLoginFailedSite(): bool|string
     {
         return file_get_contents("confic/exsite/loginfailed.html");
     }

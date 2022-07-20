@@ -52,6 +52,20 @@ footer .fullblock {
     color: #66ccff;
 }
 
+.lmbutton {
+    transform: translate(0, -35.5px);
+    background-color: rgba(0,0,0,0);
+    border: none;
+    color: white;
+    width: 80px;
+    float: right;
+    padding: 9px;
+    transition: 0.75s;
+}
+.lmbutton:hover {
+    background-color: deepskyblue;
+}
+
 .langselect {
     transform: translate(0, -35px);
     float: right;

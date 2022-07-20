@@ -7,9 +7,11 @@
         <title>管理 - {#[Title]#}</title>
         <link rel="icon" href="{#[IconUrl]#}" />
         <link rel="stylesheet" href="?reader=resource&path=css/manager.css" type="text/css" />
+        <link rel="stylesheet" href="?reader=resource&path=css/buttons.css" type="text/css" />
+        <script src="?reader=resource&path=js/time.js"></script>
     </head>
 
-    <body>
+    <body onload="startTime()">
         <header>
             <div class="fullblock">
                 <a href="./">
@@ -17,7 +19,7 @@
                 </a>
                 <label class="langselect">
                     <select>
-                        <option value="auto">自动(Auto) - {#[NowLanguage]#}</option>
+                        <option value="auto">语言(Language) - {#[NowLanguage]#}</option>
                         {#[LanguageList]#}
                     </select>
                 </label>
@@ -25,9 +27,47 @@
         </header>
 
         <main>
-            <button onclick="document.cookie = 'REF_TOKEN=empty; expires=Thu, 01 Jan 0000 00:00:00 UTC;';window.location='./'">退出登录</button>
-            <h1>好你进了管理界面，但是什么都没有（</h1>
-            <h2>闲着也是闲着，不如给个Star？<a href="https://github.com/XiaMoHuaHuo-CN/OneUniteve" target="_blank">https://github.com/XiaMoHuaHuo-CN/OneUniteve</a></h2>
+            <div class="main-header">
+                <div class="full">
+                    {#-NowTime-#}: <span id="nowDateTimeSpan"></span><br />
+                    <button class="button" onclick="document.cookie = 'REF_TOKEN=empty; expires=Thu, 01 Jan 0000 00:00:00 UTC;';window.location='./'">退出登录</button>
+                </div>
+            </div>
+            <div class="block-container">
+                <div class="block">
+                    <div class="full">
+                        <h3>{#-Theme-#}</h3>
+                        <p>{#*Theme*#}</p>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="full">
+                        <h3>{#-SystemInfo-#}</h3>
+                        <p>{#*Info*#}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cupc">
+                <div class="full">
+                    <div class="block">
+                        <h3>{#-ChangeUserNamePassword-#}</h3>
+                        <label>
+                            {#-NewUserName-#}:
+                            <input class="unc" type="text"/>
+                        </label><br />
+                        <label>
+                            {#-NewPassword-#}:
+                            <input class="npwc" type="password"/>
+                        </label><br />
+                        <label>
+                            {#-OldPassword-#}:
+                            <input class="opwc" type="password"/>
+                        </label><br />
+                        <button class="button" onclick="changeup()">修改</button>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <footer>
@@ -38,5 +78,6 @@
     </body>
 
     <script src="?reader=resource&path=js/i18n.js"></script>
+    <script src="?reader=resource&path=js/changeup.js"></script>
 
 </html>

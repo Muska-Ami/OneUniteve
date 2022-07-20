@@ -22,6 +22,36 @@ a {
     text-decoration: none;
 }
 
+main .main-header, main .cupc {
+    margin: 10px auto;
+    width: 98vw;
+    box-shadow: 3px 3px 8px gray;
+    background-color: white;
+    display: flex;
+}
+main .block-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100vw;
+}
+main .block-container .block {
+    box-shadow: 3px 3px 8px gray;
+    background-color: white;
+    width: 250px;
+    height: 300px;
+    margin: 10px;
+}
+main .block-container .block .full, main .main-header .full, main .cupc .full {
+    padding: 15px;
+}
+main .block-container .block .full h3, .cupc .block h3 {
+    font-size: 30px;
+}
+main .block-container .block .full p {
+    margin-top: 5px;
+}
+
 footer {
     border-top: 1px solid gray;
     background-color: rgb(196, 234, 255);
@@ -53,4 +83,44 @@ footer .fullblock {
 }
 .cpc a {
     color: #66ccff;
+}
+
+.cupc {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.cupc .block {
+    box-shadow: 3px 3px 8px gray;
+    background-color: white;
+    width: 350px;
+    height: 400px;
+    margin: 10px;
+    padding: 15px;
+}
+.cupc input {
+    width: 100%;
+    height: 30px;
+    text-indent: 8px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    outline: none;
+    margin: 5px auto;
+    transition: 0.75s;
+}
+.cupc input:hover, .cupc input:focus {
+    border-bottom: 1px solid blue;
+    text-indent: 10px;
+}
+.cupc .button {
+    width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+    main .block-container .block {
+        width: 98vw;
+    }
+    .cupc .block {
+        width: 100%;
+    }
 }

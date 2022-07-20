@@ -3,7 +3,7 @@ function getLang(): string
 {
     $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 4);
 
-    if ($_COOKIE['OU_LANG'] != null) {
+    if (isset($_COOKIE['OU_LANG'])) {
         $lang = $_COOKIE['OU_LANG'];
     } else {
         if (preg_match("/zh-c/i", $lang)) {

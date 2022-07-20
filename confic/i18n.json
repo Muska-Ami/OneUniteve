@@ -1,5 +1,6 @@
 {
   "langlist": {
+    "auto": ["auto", "自动(Auto)"],
     "zh-cn": ["zh-cn", "简体中文"],
     "zh": ["zh", "繁體中文"],
     "en": ["en", "English"]
@@ -11,21 +12,47 @@
       ["Password", "密码"],
       ["LoginSuccess", "登录成功"],
       ["LoginRedirect", "正在重定向..."],
-      ["LoginFailed", "登录失败"]
+      ["LoginFailed", "登录失败"],
+      ["Theme", "主题"],
+      ["SystemInfo", "系统信息"],
+      ["NowTime", "现在时间"],
+      ["ChangeUserNamePassword", "修改用户名/密码"],
+      ["NewUserName", "新用户名"],
+      ["NewPassword", "新密码"],
+      ["OldPassword", "旧密码"],
+      ["Manager", "管理"]
     ],
     "zh": [
       ["Login", "登錄"],
       ["Account", "賬戶"],
       ["Password", "密碼"],
       ["LoginSuccess", "登錄成功"],
-      ["LoginRedirect", "正在重定向..."]
+      ["LoginRedirect", "正在重定向..."],
+      ["LoginFailed", "登錄失敗"],
+      ["Theme", "主題"],
+      ["SystemInfo", "系統信息"],
+      ["NowTime", "現在時間"],
+      ["ChangeUserNamePassword", "修改用戶名/密碼"],
+      ["NewUserName", "新用戶名"],
+      ["NewPassword", "新密碼"],
+      ["OldPassword", "舊密碼"],
+      ["Manager", "管理"]
     ],
     "en": [
       ["Login", "Login"],
       ["Account", "Account"],
       ["Password", "Password"],
       ["LoginSuccess", "Login Success"],
-      ["LoginRedirect", "Redirecting..."]
+      ["LoginRedirect", "Redirecting..."],
+      ["LoginFailed", "Login Failed"],
+      ["Theme", "Theme"],
+      ["SystemInfo", "System Info"],
+      ["NowTime", "Now time"],
+      ["ChangeUserNamePassword", "Change UserName/Password"],
+      ["NewUserName", "New UserName"],
+      ["NewPassword", "New Password"],
+      ["OldPassword", "Old Password"],
+      ["Manager", "Manager"]
     ]
   }
 }

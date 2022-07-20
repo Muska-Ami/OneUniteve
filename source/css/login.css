@@ -40,7 +40,7 @@ body {
     margin: 12px auto;
     transition: 0.75s;
 }
-.container input:hover {
+.container input:hover, .container input:focus {
     border-bottom: 1px solid blue;
     text-indent: 10px;
 }
@@ -53,7 +53,6 @@ body {
     color: #fff;
     font-weight: bold;
     letter-spacing: 8px;
-    border-radius: 10px;
     cursor: pointer;
     transition: 0.5s;
 }
