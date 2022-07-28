@@ -1,9 +1,9 @@
 <?php
 class Graph
 {
-    public function startLoginUrl(): string
+    public function startadddiskLoginUrl(): string
     {
-        return 'https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=' . $this->getclientid() . '&scope=' . $this->getscope() . '&response_type=token&redirect_uri=' . $this->getredirecturi();
+        return 'https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=' . $this->getclientid() . '&scope=' . $this->getscope() . '&response_type=token&redirect_uri=' . $this->getadddiskredirecturi();
     }
 
     private function getclientid(): string
@@ -16,7 +16,7 @@ class Graph
         return urlencode('https://graph.microsoft.com/Files.ReadWrite.All https://graph.microsoft.com/Sites.ReadWrite.All offline_access');
     }
 
-    private function getredirecturi(): string
+    private function getadddiskredirecturi(): string
     {
         return urlencode('https://magra.huahuo-cn.tk');
     }
