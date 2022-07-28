@@ -3,7 +3,7 @@ class Graph
 {
     public function startLoginUrl(): string
     {
-        return 'https://login.live.com/oauth20_authorize.srf?client_id=' . $this->getclientid() . '&scope=' . $this->getscope() . '&response_type=token&redirect_uri=' . $this->getredirecturi();
+        return 'https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=' . $this->getclientid() . '&scope=' . $this->getscope() . '&response_type=token&redirect_uri=' . $this->getredirecturi();
     }
 
     private function getclientid(): string
@@ -13,7 +13,7 @@ class Graph
 
     private function getscope(): string
     {
-        return urlencode('https://graph.microsoft.com/Files.ReadWrite.All');
+        return urlencode('https://graph.microsoft.com/Files.ReadWrite.All https://graph.microsoft.com/Sites.ReadWrite.All offline_access');
     }
 
     private function getredirecturi(): string
